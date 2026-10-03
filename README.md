@@ -68,3 +68,68 @@ These are the initial baseline measurements for the domain package. Further opti
 - Intel Core i5-10400F @ 2.90 GHz
 - 6 physical cores / 12 logical processors
 - X64 RyuJIT AVX2
+
+## How to read this benchmark
+
+The source file is `MicroBundleDomain_Benchmarks.cs`.
+
+The experiment is deliberately small:
+
+1. `[GlobalSetup]` creates the dependency and provider arrays.
+2. `[Params(0, 1, 4, 16, 64)]` selects the composition size.
+3. `[Benchmark]` constructs the descriptor.
+4. BenchmarkDotNet reports time and allocation.
+
+This separation means the setup work is not accidentally included in the measured constructor cost.
+
+### Why the results belong in the package documentation
+
+A benchmark repository is useful to people who already know where to look. A package README is where most readers first encounter a performance claim.
+
+The intended evidence chain is:
+
+~~~text
+MicroBundleDomain
+      │
+      ▼
+performance baseline
+      │
+      ▼
+MicroBundleDomain_Benchmarks
+      │
+      ▼
+benchmark source
+      │
+      ▼
+BenchmarkDotNet output
+~~~
+
+The package documentation summarizes the result; this repository preserves the experiment.
+
+### Reproduce it
+
+Run the project in Release configuration:
+
+~~~bash
+dotnet run -c Release
+~~~
+
+The benchmark references `TheSingularityWorkshop.MicroBundleDomain 0.1.0-alpha.1`. Preserve that version when reproducing the historical result.
+
+Benchmark numbers are observations of a particular environment, not immutable guarantees.
+
+### When to rerun
+
+Rerun after changes to:
+
+- `MicroBundleDescriptor`;
+- dependency/provider storage;
+- validation;
+- collection materialization;
+- read-only wrapping;
+- identity/version representation;
+- allocation strategy.
+
+The goal is not to produce a flattering number.
+
+**The goal is to know what the implementation costs.**
