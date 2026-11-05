@@ -7,6 +7,7 @@
 
 # ✳️ 00 MicroBundleDomain_Benchmarks
 
+[![Sith Policy](assets/sith-policy.svg)](https://github.com/TrentBest/MicroBundleDomain_Benchmarks/actions/workflows/sith-policy.yml)
 Benchmarks for the domain-side MicroBundle descriptor contract.
 
 The benchmark suite measures the cost of constructing `MicroBundleDescriptor` instances as dependency and provider composition grows.
