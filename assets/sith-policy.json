@@ -1,0 +1,18 @@
+{
+  "repository": "TrentBest/MicroBundleDomain_Benchmarks",
+  "policy": "exactly-master-and-development",
+  "required_branches": [
+    "development",
+    "master"
+  ],
+  "actual_branches": [
+    "development",
+    "docs/benchmarking",
+    "master"
+  ],
+  "branch_count": 3,
+  "status": "NON-COMPLIANT",
+  "evaluated_at": "2026-11-05T04:29:23Z",
+  "workflow_run": "https://github.com/TrentBest/MicroBundleDomain_Benchmarks/actions/runs/41968096911",
+  "triggering_commit": "312ec98a01c2eda3710258247c7cdbd5792efcfd"
+}
