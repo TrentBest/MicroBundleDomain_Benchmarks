@@ -12,7 +12,7 @@
   ],
   "branch_count": 3,
   "status": "NON-COMPLIANT",
-  "evaluated_at": "2026-11-10T12:44:22Z",
-  "workflow_run": "https://github.com/TrentBest/MicroBundleDomain_Benchmarks/actions/runs/42818294024",
-  "triggering_commit": "8c53f4b89247b0890f3fd60f77238eb47c6cd6a2"
+  "evaluated_at": "2026-11-11T11:56:05Z",
+  "workflow_run": "https://github.com/TrentBest/MicroBundleDomain_Benchmarks/actions/runs/43016007980",
+  "triggering_commit": "26c91d998356ab0681967bd0484655bae74a5667"
 }
