@@ -23,7 +23,7 @@ This README follows the Workshop's shared [Documentation Standard](https://githu
 - providers only
 - dependencies and providers together
 - BenchmarkDotNet memory diagnostics
-- .NET 8 runtime
+- .NET 10 runtime
 
 The benchmark intentionally measures descriptor construction and validation/materialization. It does not benchmark FSM_COS composition; that belongs to the composition layer.
 
@@ -33,7 +33,7 @@ The benchmark intentionally measures descriptor construction and validation/mate
 
 ## Initial benchmark results
 
-The first Release benchmark was run with BenchmarkDotNet 0.15.2 on .NET 8.0.31, using an Intel Core i5-10400F (6 physical / 12 logical cores) with RyuJIT AVX2.
+The first Release benchmark was run with BenchmarkDotNet 0.15.2 on .NET 10.0.31, using an Intel Core i5-10400F (6 physical / 12 logical cores) with RyuJIT AVX2.
 
 The baseline is `EmptyDescriptor`. The benchmark constructs a descriptor and, when populated, validates and materializes the supplied dependency/provider collections.
 
@@ -74,7 +74,7 @@ These are the initial baseline measurements for the domain package. Further opti
 ## Benchmark environment
 
 - BenchmarkDotNet 0.15.2
-- .NET 8.0.31
+- .NET 10.0.31
 - Windows 10 22H2
 - Intel Core i5-10400F @ 2.90 GHz
 - 6 physical cores / 12 logical processors
